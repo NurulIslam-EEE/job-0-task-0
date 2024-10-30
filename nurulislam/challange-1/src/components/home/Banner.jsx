@@ -1,11 +1,12 @@
+import ButtonCustom from "../common/ButtonCustom";
 import Navigation from "../common/Navigation";
 
 function Banner() {
   return (
-    <div className="bg-[url('/hero.png')] bg-auto bg-center w-[100%] h-auto">
+    <div className="bg-[url('/hero.png')] pt-6 banner-bg">
       <Navigation />
-      <div className="left w-[994px] mx-auto ">
-        <h3 className="text-[60px]  font-[700] text-center">
+      <div className="left lg:w-[994px] mx-auto ">
+        <h3 className="text-[60px]  font-[700] text-center ">
           Transform your workflow with cutting-edge solutions from FYTOBYTE
           LIMITED.
         </h3>
@@ -14,10 +15,13 @@ function Banner() {
           sapiente suscipit amet optio quia fuga rerum ex cupiditate maiores,
           perferendis blanditiis, quam a.
         </p>
-        <div className="hero-buttons"></div>
+        <div className="hero-buttons flex justify-center -mb-[90px] mt-8 z-10">
+          <ButtonCustom title="Get Started" className="mr-4 px-6" />
+          <ButtonCustom title="Join Us" className="px-9" />
+        </div>
       </div>
-      <div className="bottom text-center">
-        <img src="/hero-img.png" alt="" className="inline-block" />
+      <div className="bottom text-center ">
+        <img src="/hero-img.png" alt="" className="inline-block -mb-48" />
       </div>
     </div>
   );

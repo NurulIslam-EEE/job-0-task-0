@@ -19,8 +19,17 @@
 body {
 }
 
-/* banner */
+.gradient-text {
+  background: -webkit-linear-gradient(left, #000000, #e7e7e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+/* banner */
+.banner-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
