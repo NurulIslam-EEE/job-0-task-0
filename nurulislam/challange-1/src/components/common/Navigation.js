@@ -1,5 +1,6 @@
 "use client";
 import useTheme from "@/hooks/useTheme";
+import Link from "next/link";
 import { useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 
@@ -20,9 +21,12 @@ function Navigation() {
           )}
         </div>
         <div className="xl:flex hidden">
-          <p className="font-[16px] text-[#224192] mr-8 border-b-2 border-[#224192] cursor-pointer">
+          <Link
+            href="/"
+            className="font-[16px] text-[#224192] mr-8 border-b-2 border-[#224192] cursor-pointer"
+          >
             Home
-          </p>
+          </Link>
           <p className="font-[16px] text-[#224192] mr-8 cursor-pointer">
             Services
           </p>
@@ -30,9 +34,12 @@ function Navigation() {
             Solutions
           </p>
           <p className="font-[16px] text-[#224192] mr-8 cursor-pointer">FAQ</p>
-          <p className="font-[16px] text-[#224192] mr-8 cursor-pointer">
+          <Link
+            href="/about-us"
+            className="font-[16px] text-[#224192] mr-8 cursor-pointer"
+          >
             About
-          </p>
+          </Link>
           <p className="font-[16px] text-[#224192] mr-8 cursor-pointer">Blog</p>
         </div>
         <div className="buttons flex ">
