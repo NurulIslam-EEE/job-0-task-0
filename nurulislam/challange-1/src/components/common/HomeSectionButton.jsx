@@ -1,9 +1,16 @@
-import React from "react";
+"use client";
+
+import useTheme from "@/hooks/useTheme";
 
 function HomeSectionButton({ title, className, src }) {
+  const { light } = useTheme();
   return (
     <div
-      className={`mx-auto flex items-center p-2 rounded-full bg-white border w-fit border-[#171717]  ${className}`}
+      className={`mx-auto flex items-center p-2 rounded-full border w-fit ${
+        !light
+          ? "border-[#404040] text-[#d4d4d4]"
+          : "border-[#171717] bg-white "
+      }   ${className}`}
     >
       <span className="inline-block text-[24px]"> {title}</span>
 

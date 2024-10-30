@@ -6,7 +6,11 @@ function OurSolution() {
   return (
     <section className="pt-52">
       <div className="container mx-auto">
-        <HomeSectionButton title="Our Solution" src="/sec1.png" />
+        <HomeSectionButton
+          title="Our Solution"
+          src="/sec1.png"
+          className={` px-6`}
+        />
         <h3 className="text-[48px] text-center mt-5 font-[700]">
           {" "}
           <span className="gradient-text"> Streamlining operations,</span>{" "}

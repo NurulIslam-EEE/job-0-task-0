@@ -1,22 +1,33 @@
+"use client";
 import HomeSectionButton from "../common/HomeSectionButton";
 import ButtonCustom from "../common/ButtonCustom";
+import useTheme from "@/hooks/useTheme";
 
 function OurBlog() {
+  const { light } = useTheme();
   return (
     <section className="container mx-auto">
       <HomeSectionButton
         title="Tech news"
-        className="my-8 px-4"
+        className="my-8 px-6"
         src="/sec3.png"
       />
-      <h3 className="gradient-text text-[48px] text-center font-bold">
+      <h3
+        className={` ${
+          light ? "gradient-text" : "gradient-white-text "
+        }  text-[48px] text-center font-bold`}
+      >
         Our Blog & News
       </h3>
-      <p className="text-center mb-4">
+      <p className={`text-center text-2xl mb-6 ${!light && "text-[#737373]"}`}>
         We share essential insights from the technology sector, AI, <br /> and
         the world of software development.
       </p>
-      <div className="flex justify-between border  rounded-2xl bg-[#F5F5F5]">
+      <div
+        className={`flex justify-between border  rounded-2xl bg-[#F5F5F5] ${
+          !light && "text-[#d4d4d4] bg-black border-[#404040]"
+        } `}
+      >
         <div className="div w-[35%] p-6 pr-2">
           {" "}
           <h3 className="text-2xl font-bold mb-5">
