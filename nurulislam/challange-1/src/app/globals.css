@@ -24,6 +24,11 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.gradient-white-text {
+  background: -webkit-linear-gradient(left, #ffffff, #685e5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* banner */
 .banner-bg {
