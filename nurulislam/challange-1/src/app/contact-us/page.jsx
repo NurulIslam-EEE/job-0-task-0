@@ -7,7 +7,7 @@ function ContactUs() {
   const { light, setLight } = useTheme();
   return (
     <div className={`${!light && "bg-[#000000]"}`}>
-      <section className={`container mx-auto`}>
+      <section className={`container mx-auto px-4`}>
         <h3
           className={`text-7xl font-bold text-center pt-8 mb-4 ${
             !light && "text-white"
@@ -56,9 +56,9 @@ function ContactUs() {
             ></textarea>
             <ButtonCustom
               title="Send The Message"
-              className={`border-0 w-[100%] ${
+              className={`border-0  ${
                 !light && "bg-[#969393] text-black font-bold"
-              }`}
+              } !w-[100%]`}
             />
           </form>
         </div>

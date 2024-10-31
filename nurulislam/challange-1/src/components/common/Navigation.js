@@ -16,15 +16,18 @@ function Navigation() {
   return (
     <nav className={`${!light && pathname !== "/" && "bg-[#000000]"}  pt-5`}>
       <div
-        className={`rounded-full bg-[#ffffff45] backdrop-blur-[19.5px] w-[95%] xl:w-[1384px] mx-auto py-4 px-10 `}
+        className={`rounded-full md:bg-[#ffffff45] backdrop-blur-[19.5px] w-[95%] xl:w-[1384px] mx-auto py-4 px-10 `}
       >
         <div className="flex justify-between items-center">
-          <div className="logo">
+          <div className="logo hidden md:block">
             {light ? (
               <img src="/logo-home.png" alt="" />
             ) : (
               <img src="/logo-white.png" alt="" />
             )}
+          </div>
+          <div className="logo md:hidden">
+            <img src="/logo-mb.png" alt="" />
           </div>
           <div className="xl:flex hidden">
             <Link
@@ -85,7 +88,7 @@ function Navigation() {
               Contact
             </Link>
           </div>
-          <div className="buttons flex ">
+          <div className="buttons flex items-center">
             <button
               className={`w-[56px] h-[40px] rounded-full  flex justify-center items-center mr-4 ${
                 light ? "bg-[#F2F2F2]" : "bg-[#171717]"
@@ -98,9 +101,15 @@ function Navigation() {
                 <IoSunnyOutline className="text-white text-2xl" />
               )}
             </button>
-            <button className="bg-[#171717] text-white py-2 px-4 rounded-full">
-              talk with us
+            <button className="bg-[#171717] hidden md:block text-white py-2 px-4 rounded-full">
+              Talk with us
             </button>
+            <button className="bg-[#171717]  md:hidden text-white py-1 px-8 rounded-full">
+              Sign Up
+            </button>
+            <div className="block md:hidden ml-4">
+              <img src={light ? "/label.png" : "label2.png"} alt="" />
+            </div>
           </div>
         </div>
       </div>

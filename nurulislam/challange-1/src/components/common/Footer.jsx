@@ -15,48 +15,56 @@ function Footer() {
             <h3 className={`text-[24px] font-bold ${!light && "text-white"}`}>
               Explore
             </h3>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>
-              About FYTOBYTE LIMITED
-            </p>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>Our Solution</p>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>Our Blog</p>
+            <div className="hidden md:block">
+              <p className={`text-[#737373] mt-2 text-[16px]`}>
+                About FYTOBYTE LIMITED
+              </p>
+              <p className={`text-[#737373] mt-2 text-[16px]`}>Our Solution</p>
+              <p className={`text-[#737373] mt-2 text-[16px]`}>Our Blog</p>
+            </div>
           </div>
           <div className={``}>
             <h3 className={`text-[24px] font-bold ${!light && "text-white"}`}>
               Expertise
             </h3>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>
-              Cloud Integration Solutions
-            </p>
-            <p className={`text-[#737373] mt-2 text-[16px] `}>
-              Custom Web Development
-            </p>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>
-              Data Analytics and Insights
-            </p>
+            <div className="hidden md:block">
+              <p className={`text-[#737373] mt-2 text-[16px]`}>
+                Cloud Integration Solutions
+              </p>
+              <p className={`text-[#737373] mt-2 text-[16px] `}>
+                Custom Web Development
+              </p>
+              <p className={`text-[#737373] mt-2 text-[16px]`}>
+                Data Analytics and Insights
+              </p>
+            </div>
           </div>
           <div className={``}>
             <h3 className={`text-[24px] font-bold ${!light && "text-white"}`}>
               Services
             </h3>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>
-              Cybersecurity & Compliance
-            </p>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>
-              AI-Powered Automation
-            </p>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>
-              User Experience Design
-            </p>
+            <div className="hidden md:block">
+              <p className={`text-[#737373] mt-2 text-[16px]`}>
+                Cybersecurity & Compliance
+              </p>
+              <p className={`text-[#737373] mt-2 text-[16px]`}>
+                AI-Powered Automation
+              </p>
+              <p className={`text-[#737373] mt-2 text-[16px]`}>
+                User Experience Design
+              </p>
+            </div>
           </div>
 
           <div className={``}>
             <h3 className={`text-[24px] font-bold ${!light && "text-white"}`}>
               Info
             </h3>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>FAQ</p>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>Documentation</p>
-            <p className={`text-[#737373] mt-2 text-[16px]`}>Get in touch</p>
+            <div className="hidden md:block">
+              <p className={`text-[#737373] mt-2 text-[16px] `}>FAQ</p>
+              <p className={`text-[#737373] mt-2 text-[16px]`}>Documentation</p>
+              <p className={`text-[#737373] mt-2 text-[16px]`}>Get in touch</p>
+            </div>
           </div>
         </div>
         <div className={`mx-auto mt-6 w-fit`}>

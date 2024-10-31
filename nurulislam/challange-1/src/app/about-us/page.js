@@ -6,7 +6,7 @@ function AboutUs() {
   const { light, setLight } = useTheme();
   return (
     <div className={` ${!light && "bg-[#000000]"}`}>
-      <section className={`container mx-auto pb-20`}>
+      <section className={`container mx-auto pb-20 px-4 `}>
         <h3
           className={`text-7xl font-bold text-center pt-8 mb-4 ${
             !light && "text-white"
@@ -20,8 +20,8 @@ function AboutUs() {
           Watch your operations optimize as our apps streamline workflows and
           drives <br /> efficiency for your success.
         </p>
-        <div className="flex justify-between">
-          <div className="w-[60%]">
+        <div className="flex justify-between flex-col md:flex-row">
+          <div className="w=[100%] md:w-[60%]">
             <div>
               <img src="/office1.jpeg" alt="" className="rounded-xl" />
             </div>
@@ -37,7 +37,7 @@ function AboutUs() {
                 className="mb-3"
               />
               <h3 className="mb-3">Mission</h3>
-              <p className={``}>
+              <p className={`mt-4 md:mt-0`}>
                 At FYTOBYTE LIMITED, our mission is to revolutionize the
                 business landscape by delivering innovative SaaS solutions that
                 empower growth and efficiency. We strive to create seamless,
@@ -49,7 +49,7 @@ function AboutUs() {
               </p>
             </div>
           </div>
-          <div className="w-[35%] flex flex-col">
+          <div className="w-[100%%] md:w-[35%] flex flex-col mt-6 md:mt-0">
             <div
               className={`border rounded-xl p-6 mb-6 ${
                 !light ? "bg-[#000000]" : "bg-[#F5F5F5]"
@@ -76,7 +76,7 @@ function AboutUs() {
                 excellence.
               </p>
             </div>
-            <div className="flex-1 overflow-hidden">
+            <div className="md:flex-1 overflow-hidden">
               <img
                 src="/office2.jpeg"
                 alt=""

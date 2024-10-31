@@ -19,6 +19,22 @@
 body {
 }
 
+.hero-buttons {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  max-width: 1340px;
+}
+
+@media (max-width: 1324) {
+  .container {
+    padding-left: 10px;
+  }
+}
+
 .gradient-text {
   background: -webkit-linear-gradient(left, #000000, #e7e7e7);
   -webkit-background-clip: text;

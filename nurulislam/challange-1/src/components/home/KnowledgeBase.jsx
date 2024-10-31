@@ -25,24 +25,31 @@ function KnowledgeBase() {
         knowledge base API and documentation.
       </p>
 
-      <div className="grid grid-cols-2 gap-9">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-9 justify-items-center">
         <div
-          className={`w-full overflow-hidden rounded-3xl ${
+          className={` w-[330px] md:w-full overflow-hidden rounded-3xl ${
             !light && "border border-[#404040]"
           }`}
         >
-          <img src="/knowledge1.png" alt="" className="w-full" />
+          <img
+            src="/knowledge1.png"
+            alt=""
+            className="hidden md:w-full md:block"
+          />
+          <img src="/knowledge-mb.png" alt="" className="w-full md:hidden" />
         </div>
 
         <div
-          className={`border pb-10 pt-6 px-10 rounded-3xl ${
+          className={`w-[330px] md:w-full border pb-10 pt-6 px-10 rounded-3xl ${
             !light && "text-[#d4d4d4] border-[#404040]"
           }`}
         >
           <div>
             <img src="/knowledge2.png" alt="" className="mb-4" />
           </div>
-          <h3 className="text-4xl font-bold mb-6">Full Api Access</h3>
+          <h3 className="text-lg md:text-4xl font-bold mb-6">
+            Full Api Access
+          </h3>
           <p className={``}>
             Sign up and access our intuitive platform. Upload your data
             effortlessly, then customize preferences. Our robust tools analyze

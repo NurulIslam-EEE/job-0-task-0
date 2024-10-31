@@ -1,11 +1,12 @@
-import React from "react";
+"use client";
 import HomeSectionButton from "../common/HomeSectionButton";
 import SolutionCard from "./SolutionCard";
+import useTheme from "@/hooks/useTheme";
 
 function OurSolution() {
   return (
     <section className="pt-52">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <HomeSectionButton
           title="Our Solution"
           src="/sec1.png"
@@ -15,14 +16,17 @@ function OurSolution() {
           {" "}
           <span className="gradient-text"> Streamlining operations,</span>{" "}
           <br />
-          <span className="gradient-text"> unleashing seamless digital </span>
+          <span className="gradient-text">
+            {" "}
+            unleashing seamless digital{" "}
+          </span>{" "}
           <br />
           <span className="gradient-text"> solutions</span>
         </h3>{" "}
         <p className="text-center">
           Innovative solutions for seamless digital transformation.
         </p>
-        <div className="grid grid-cols-2 gap-9 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-9 mt-6 justify-items-center">
           <SolutionCard
             src="/solution1.png"
             title="FYTOBYTE LIMITED "
