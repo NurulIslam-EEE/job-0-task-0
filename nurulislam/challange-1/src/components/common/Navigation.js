@@ -90,7 +90,7 @@ function Navigation() {
           </div>
           <div className="buttons flex items-center">
             <button
-              className={`w-[56px] h-[40px] rounded-full  flex justify-center items-center mr-4 ${
+              className={`w-[56px] h-[40px] ml-2 rounded-full  flex justify-center items-center mr-4 ${
                 light ? "bg-[#F2F2F2]" : "bg-[#171717]"
               }`}
               onClick={() => setLight(!light)}
@@ -101,10 +101,10 @@ function Navigation() {
                 <IoSunnyOutline className="text-white text-2xl" />
               )}
             </button>
-            <button className="bg-[#171717] hidden md:block text-white py-2 px-4 rounded-full">
+            <button className="bg-[#171717] hidden  md:block text-white py-2  px-4 rounded-full">
               Talk with us
             </button>
-            <button className="bg-[#171717]  md:hidden text-white py-1 px-8 rounded-full">
+            <button className="bg-[#171717]  md:hidden text-white  py-1 sm:px-2 md:px-8 rounded-full">
               Sign Up
             </button>
             <div className="block md:hidden ml-4">

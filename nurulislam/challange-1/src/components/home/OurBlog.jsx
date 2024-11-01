@@ -10,7 +10,7 @@ function OurBlog() {
       <HomeSectionButton
         title="Tech news"
         className="my-8 px-6"
-        src="/sec3.png"
+        src={!light ? "/sec3b.png" : "/sec3.png"}
       />
       <h3
         className={` ${

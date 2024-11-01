@@ -4,17 +4,23 @@ import SolutionCard from "./SolutionCard";
 import useTheme from "@/hooks/useTheme";
 
 function OurSolution() {
+  const { light } = useTheme();
   return (
     <section className="pt-52">
       <div className="container mx-auto px-4">
         <HomeSectionButton
           title="Our Solution"
-          src="/sec1.png"
+          src={!light ? "/sec1b.png" : "/sec1.png"}
           className={` px-6`}
         />
         <h3 className="text-[48px] text-center mt-5 font-[700]">
           {" "}
-          <span className="gradient-text"> Streamlining operations,</span>{" "}
+          <span
+            className={` ${!light ? "gradient-white-text" : "gradient-text"}`}
+          >
+            {" "}
+            Streamlining operations,
+          </span>{" "}
           <br />
           <span className="gradient-text">
             {" "}

@@ -9,7 +9,7 @@ function KnowledgeBase() {
     <section className="container mx-auto mt-10">
       <HomeSectionButton
         title="Knowledge Base"
-        src="sec2.png"
+        src={!light ? "/sec2b.png" : "/sec2.png"}
         className="mb-9 px-6"
       />
 

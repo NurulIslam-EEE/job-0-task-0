@@ -23,7 +23,7 @@ function ContactUs() {
           Drop us a line to start your project or simply just say "Hello!".
         </p>
 
-        <div className={`flex mb-10`}>
+        <div className={`block md:flex mb-10`}>
           <div className={`w-[40%]`}>
             <h5 className={`text-2xl font-bold ${!light && "text-white"}`}>
               WE'RE READY!
@@ -40,7 +40,7 @@ function ContactUs() {
               <li>Email: mfahlevi740@gmail.com</li>
             </ul>
           </div>
-          <form className={`w-[60%]`}>
+          <form className={`w-[100%] md:w-[60%] mt-4 md:mt-0`}>
             <div className="flex justify-between">
               <input
                 type="text"
@@ -63,19 +63,23 @@ function ContactUs() {
           </form>
         </div>
 
-        <div className={`flex justify-between items-center pb-20`}>
+        <div
+          className={`flex flex-col md:flex-row justify-between items-center pb-20`}
+        >
           <div
             className={`flex justify-center items-center ${
               !light && "bg-[#ffffff] text-black"
-            } bg-[#000000] rounded-3xl w-[49%] h-[350px] text-center text-white`}
+            } bg-[#000000] rounded-3xl w-[100%] md:w-[49%] h-[350px] text-center text-white`}
           >
             <p>
               {" "}
               Your business <br /> Location
             </p>
           </div>
-          <div className={`rounded-3xl  w-[49%] overflow-hidden`}>
-            <img src="/contact.png" alt="" />
+          <div
+            className={`rounded-3xl w-[100%]  md:w-[49%] overflow-hidden mt-8`}
+          >
+            <img src="/contact.png" alt="" className="w-[100%]" />
           </div>
         </div>
       </section>
