@@ -39,6 +39,7 @@ import {
   Download,
   ArrowRight,
   Square,
+  Blocks,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -64,8 +65,10 @@ import { DatePickerWithRange } from "@/components/table/DatePicker";
 import ToggleColumns from "@/components/table/ToggleColumns";
 import { NewTask } from "@/components/table/NewTsak";
 import { PaginationTable } from "@/components/table/PaginationTable";
+import { AdvancedFilterDropDown } from "../components/table/AdvancedFilterDropDown";
 
 export default function Home() {
+  const [advancedFilter, setAdvancedFilter] = React.useState(false);
   const [sorting, setSorting] = React.useState();
   const [columnFilters, setColumnFilters] = React.useState();
   const [columnVisibility, setColumnVisibility] = React.useState({});
@@ -135,8 +138,12 @@ export default function Home() {
           {/* top buttons */}
           <div className="flex ">
             <div>
-              <Button variant="outline" className="mr-2">
-                Advanced filter
+              <Button
+                variant="outline"
+                onClick={() => setAdvancedFilter(!advancedFilter)}
+                className={`mr-2 ${advancedFilter && "bg-slate-100"}`}
+              >
+                <Blocks /> Advanced filter
               </Button>
             </div>
             <Button variant="outline">
@@ -202,9 +209,12 @@ export default function Home() {
               <Button variant="outline" className="ml-auto mr-2" type="file">
                 <Download className="mr-2 h-4 w-4" /> Export
               </Button>
+              {advancedFilter && <AdvancedFilterDropDown />}
               <ToggleColumns table={table} />
             </div>
           </div>
+
+          {/* advanced */}
 
           {/* table start here */}
 

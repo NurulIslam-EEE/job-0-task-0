@@ -97,7 +97,7 @@ export function SearchAbleDropDown({ value2, setValue2, SearchData, title }) {
                     match?.length > 0
                       ? setValue2(value2.filter((a) => a !== currentValue))
                       : setValue2([...value2, currentValue]);
-                    setOpen(false);
+                    // setOpen(false);
                   }}
                 >
                   {value2?.includes(framework.value) ? (
