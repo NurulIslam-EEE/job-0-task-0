@@ -24,6 +24,7 @@ import {
 } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { filterFns } from "@tanstack/react-table";
+import { useState } from "react";
 
 export const columns = [
   {
@@ -57,18 +58,27 @@ export const columns = [
   {
     accessorKey: "title",
     header: ({ column }) => {
+      const [sortType, setSortType] = useState("");
       const ascSort = () => {
         column.toggleSorting(column.getIsSorted() === "asc");
+        setSortType("asc");
       };
       const dscSort = () => {
         column.toggleSorting(column.getIsSorted() === "dsc");
+        setSortType("desc");
       };
       return (
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Button variant="ghost">
               Title
-              <ArrowDown className="ml-2 h-4 w-4" />
+              {sortType === "asc" ? (
+                <ArrowUp />
+              ) : sortType === "desc" ? (
+                <ArrowDown />
+              ) : (
+                <ChevronsUpDown className="ml-2 h-4 w-4" />
+              )}
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
@@ -94,7 +104,7 @@ export const columns = [
       <div className="capitalize">
         <div class="flex space-x-2">
           <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
-            {row.getValue("label")}
+            feature
           </div>
           <span className="max-w-[31.25rem] truncate font-medium">
             {row.getValue("title")}
@@ -107,14 +117,46 @@ export const columns = [
     accessorKey: "status",
     filterFn: "arrIncludesSome",
     header: ({ column }) => {
+      const [sortType, setSortType] = useState("");
+      const ascSort = () => {
+        column.toggleSorting(column.getIsSorted() === "asc");
+        setSortType("asc");
+      };
+      const dscSort = () => {
+        column.toggleSorting(column.getIsSorted() === "desc");
+        setSortType("desc");
+      };
       return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Status
-          <ChevronsUpDown className="ml-2 h-4 w-4" />
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Button variant="ghost">
+              Status
+              {sortType === "asc" ? (
+                <ArrowUp />
+              ) : sortType === "desc" ? (
+                <ArrowDown />
+              ) : (
+                <ChevronsUpDown className="ml-2 h-4 w-4" />
+              )}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem onClick={() => ascSort()}>
+              {" "}
+              <ArrowUp />
+              Asc
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => dscSort()}>
+              {" "}
+              <ArrowDown /> Desc
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <EyeOff />
+              Hide
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       );
     },
     cell: ({ row }) => (
@@ -133,7 +175,49 @@ export const columns = [
   {
     accessorKey: "priority",
     filterFn: "arrIncludesSome",
-    header: () => <div className="text-right">Priority</div>,
+    header: ({ column }) => {
+      const [sortType, setSortType] = useState("");
+      const ascSort = () => {
+        column.toggleSorting(column.getIsSorted() === "asc");
+        setSortType("asc");
+      };
+      const dscSort = () => {
+        column.toggleSorting(column.getIsSorted() === "desc");
+        setSortType("desc");
+      };
+      return (
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Button variant="ghost">
+              Priority
+              {sortType === "asc" ? (
+                <ArrowUp />
+              ) : sortType === "desc" ? (
+                <ArrowDown />
+              ) : (
+                <ChevronsUpDown className="ml-2 h-4 w-4" />
+              )}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem onClick={() => ascSort()}>
+              {" "}
+              <ArrowUp />
+              Asc
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => dscSort()}>
+              {" "}
+              <ArrowDown /> Desc
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <EyeOff />
+              Hide
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      );
+    },
     cell: ({ row }) => {
       const amount = row.getValue("priority");
 
@@ -151,6 +235,56 @@ export const columns = [
           {amount}
         </div>
       );
+    },
+  },
+  {
+    accessorKey: "created_at",
+    filterFn: "arrIncludesSome",
+    header: ({ column }) => {
+      const [sortType, setSortType] = useState("");
+      const ascSort = () => {
+        column.toggleSorting(column.getIsSorted() === "asc");
+        setSortType("asc");
+      };
+      const dscSort = () => {
+        column.toggleSorting(column.getIsSorted() === "desc");
+        setSortType("desc");
+      };
+      return (
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Button variant="ghost">
+              Created At
+              {sortType === "asc" ? (
+                <ArrowUp />
+              ) : sortType === "desc" ? (
+                <ArrowDown />
+              ) : (
+                <ChevronsUpDown className="ml-2 h-4 w-4" />
+              )}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem onClick={() => ascSort()}>
+              {" "}
+              <ArrowUp />
+              Asc
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => dscSort()}>
+              {" "}
+              <ArrowDown /> Desc
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <EyeOff />
+              Hide
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      );
+    },
+    cell: ({ row }) => {
+      return <div>{row.getValue("created_at")}</div>;
     },
   },
   {

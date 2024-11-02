@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function data-table() {
-  return (
-    <div>data-table</div>
-  )
+function DataTable() {
+  return <div>data-table</div>;
 }
 
-export default data-table
+export default DataTable;

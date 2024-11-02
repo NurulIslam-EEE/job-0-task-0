@@ -24,7 +24,7 @@ export const data = [
       "You can't hack the monitor without copying the bluetooth SQL protocol!",
     status: "Canceled",
     priority: "Low",
-    created_at: "",
+    created_at: "Jun 10, 2024",
   },
   {
     id: "3u1reuv4",
@@ -34,7 +34,7 @@ export const data = [
       "You can't generate the array without indexing the 1080p AGP transmitter!",
     status: "In-progress",
     priority: "High",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
   {
     id: "derv1ws0",
@@ -43,7 +43,7 @@ export const data = [
     title: "Use the online FTP port, then you can input the 1080p interface!",
     status: "Done",
     priority: "Medium",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
   {
     id: "5kma53ae",
@@ -53,7 +53,7 @@ export const data = [
       "I'll synthesize the wireless SDD bus, that should feed the ASCII alarm!",
     status: "success",
     priority: "Low",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
   {
     id: "bhqecj4p",
@@ -64,7 +64,7 @@ export const data = [
       "Use the neural DNS system, then you can transmit the open-source port!",
     status: "In-progress",
     priority: "Medium",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
   {
     id: "bhqecj4p1",
@@ -74,7 +74,7 @@ export const data = [
       "Use the neural DNS system, then you can transmit the open-source port!",
     status: "Canceled",
     priority: "Medium",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
   {
     id: "bhqecj4p2",
@@ -84,7 +84,7 @@ export const data = [
       "Use the neural DNS system, then you can transmit the open-source port!",
     status: "Done",
     priority: "High",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
   {
     id: "bhqecj4p2",
@@ -94,7 +94,7 @@ export const data = [
       "Use the neural DNS system, then you can transmit the open-source port!",
     status: "Done",
     priority: "High",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
   {
     id: "bhqecj4p2",
@@ -104,7 +104,7 @@ export const data = [
       "Use the neural DNS system, then you can transmit the open-source port!",
     status: "Done",
     priority: "High",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
   {
     id: "bhqecj4p2",
@@ -114,7 +114,7 @@ export const data = [
       "Use the neural DNS system, then you can transmit the open-source port!",
     status: "Done",
     priority: "High",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
   {
     id: "bhqecj4p2",
@@ -124,7 +124,7 @@ export const data = [
       "Use the neural DNS system, then you can transmit the open-source port!",
     status: "Done",
     priority: "High",
-    created_at: "",
+    created_at: "May 2, 2024",
   },
 ];
 
