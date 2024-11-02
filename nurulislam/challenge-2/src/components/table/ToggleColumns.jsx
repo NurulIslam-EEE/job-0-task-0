@@ -15,7 +15,7 @@ function ToggleColumns({ table }) {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="ml-auto">
+          <Button variant="outline" className="ml-2">
             <Settings2 className="mr-2 h-4 w-4" /> View
           </Button>
         </DropdownMenuTrigger>
