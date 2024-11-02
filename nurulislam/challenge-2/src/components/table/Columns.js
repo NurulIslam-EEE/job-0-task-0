@@ -104,7 +104,7 @@ export const columns = [
       <div className="capitalize">
         <div class="flex space-x-2">
           <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
-            feature
+            {row.original.label}
           </div>
           <span className="max-w-[31.25rem] truncate font-medium">
             {row.getValue("title")}
@@ -290,6 +290,10 @@ export const columns = [
   {
     id: "actions",
     enableHiding: false,
+
+    header: ({ column }) => {
+      return <div>Actions</div>;
+    },
     cell: ({ row }) => {
       const payment = row.original;
 

@@ -14,6 +14,11 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
   ArrowUpDown,
   ChevronDown,
   MoreHorizontal,
@@ -281,6 +286,12 @@ export default function Home() {
           <PaginationTable table={table} />
         </div>
       </div>
+
+      {/* popover */}
+      {/* <Popover>
+        <PopoverTrigger>Open</PopoverTrigger>
+        <PopoverContent>Place content for the popover here.</PopoverContent>
+      </Popover> */}
     </main>
   );
 }
