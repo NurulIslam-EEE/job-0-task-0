@@ -62,7 +62,7 @@ export function SearchAbleDropDown({ value2, setValue2, SearchData, title }) {
       <PopoverTrigger asChild>
         <Button
           variant="outline"
-          className="ml-2 border-dashed"
+          className="mr-2 border-dashed"
           aria-expanded={open}
         >
           <CirclePlus /> {title}
@@ -70,7 +70,9 @@ export function SearchAbleDropDown({ value2, setValue2, SearchData, title }) {
           {value2?.length < 3 &&
             value2?.length > 0 &&
             value2?.map((val) => (
-              <div className="bg-[#f4f4f5] p-1 rounded-sm">{val}</div>
+              <div key={val} className="bg-[#f4f4f5] p-1 rounded-sm">
+                {val}
+              </div>
             ))}
           {value2?.length > 2 && (
             <div className="bg-[#f4f4f5] p-1 rounded-sm">
@@ -112,13 +114,17 @@ export function SearchAbleDropDown({ value2, setValue2, SearchData, title }) {
                   {framework.label}
                 </CommandItem>
               ))}
-              <hr />
-              <CommandItem
-                className="flex justify-center mt-1"
-                onSelect={() => setValue2([])}
-              >
-                Clear filters
-              </CommandItem>
+              {value2.length > 0 && (
+                <>
+                  <hr />
+                  <CommandItem
+                    className="flex justify-center mt-1"
+                    onSelect={() => setValue2([])}
+                  >
+                    Clear filters
+                  </CommandItem>
+                </>
+              )}
             </CommandGroup>
           </CommandList>
         </Command>
